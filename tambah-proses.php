@@ -12,7 +12,7 @@ if(isset($_post['tambah'])){
   $jurusan  = $_post['jurusan'];
 
   // Melalukan Query dengan perintah INSERT INTO untuk memasukkan data ke Database;
-  $input = mysql_query("INSERT INTO test VALUES(null, '$id', '$nama', '$kelas', '$jurusan')") or die(mysql_error());
+  $input = mysqli_query("INSERT INTO test VALUES(null, '$id', '$nama', '$kelas', '$jurusan')") or die(mysqli_error());
 
 
   //Jika query input Sukses

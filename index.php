@@ -20,19 +20,18 @@
       <?php
       //Include file koneksi
       include("koneksi.php");
+      $sql = "SELECT * FROM siswa";
 
       //Query ke database dengan Select;
-      $query = mysql_query("SELECT * FROM test") or die(mysql_error());
+      $query = mysqli_query($koneksi, $sql);// or die(mysqli_error());
 
-      if(mysql_num_rows($query) == 0){
+      if(mysqli_num_rows($query) == 0){
         //Jika data kosong
-        echo '<tr>
-                <td colspan="6">Tidak ada data!!</td>
-        </tr>';
+        echo 'Tidak ada data.';
       }else{
         //Jika data tidak kosong, maka akan melalkukan perulangan While
         $no = 1;
-        while($data = mysql_fetch_assoc($query)){
+        while($data = mysqli_fetch_assoc($query)){
             echo '<tr>';
                 echo '<td>'.$data['id'].'</td>';
                 echo '<td>'.$data['nama'].'</td>';
