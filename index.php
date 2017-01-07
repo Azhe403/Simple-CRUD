@@ -34,7 +34,7 @@
         $no = 1;
         while($data = mysql_fetch_assoc($query)){
             echo '<tr>';
-                echo '<td>'.$no.'</td>';
+                echo '<td>'.$data['id'].'</td>';
                 echo '<td>'.$data['nama'].'</td>';
                 echo '<td>'.$data['kelas'].'</td>';
                 echo '<td>'.$data['jurusan'].'</td>';
