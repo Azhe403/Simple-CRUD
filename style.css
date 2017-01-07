@@ -1,0 +1,23 @@
+body{
+	font-family: segoe ui; font-size: 20px; color: white;	
+	background: blue;
+	
+}
+
+input{
+	width:250px; height:30px;
+	font-size:15px;
+}
+
+select{
+	width: 250px; height: 30px;
+	font-size: 15px;
+}
+
+input[type="radio"]{
+	width: auto;
+}
+
+h1{
+	font-family: segoe ui; font-size: 35px;
+}
