@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Latihan Crud by Azhe403</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   </head>
   <body>
     <h2>Simple Crud</h2>
@@ -33,10 +34,10 @@
         $no = 1;
         while($data = mysqli_fetch_assoc($query)){
             echo '<tr>';
-                echo '<td>'.$data['id'].'</td>';
-                echo '<td>'.$data['nama'].'</td>';
-                echo '<td>'.$data['kelas'].'</td>';
-                echo '<td>'.$data['jurusan'].'</td>';
+                echo '<td width="40">'.$data['id'].'</td>';
+                echo '<td width="300">'.$data['nama'].'</td>';
+                echo '<td width="50">'.$data['kelas'].'</td>';
+                echo '<td width="150">'.$data['jurusan'].'</td>';
             echo '</tr>';
             $no++;
 
@@ -45,6 +46,8 @@
 
        ?>
     </table>
+	<br>
+    <p>&copy 2016 Azhe403, Inc. Allright Reserved.</p>
 
   </body>
 </html>

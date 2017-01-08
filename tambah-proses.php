@@ -12,7 +12,7 @@ if(isset($_post['tambah'])){
   $jurusan  = $_post['jurusan'];
 
   // Melalukan Query dengan perintah INSERT INTO untuk memasukkan data ke Database;
-  $input = mysqli_query("INSERT INTO test VALUES(null, '$id', '$nama', '$kelas', '$jurusan')") or die(mysqli_error());
+  $input = mysqli_query($koneksi,"INSERT INTO siswa VALUES('$id', '$nama', '$kelas', '$jurusan')") or die(mysqli_error());
 
 
   //Jika query input Sukses
@@ -23,7 +23,7 @@ if(isset($_post['tambah'])){
     echo 'Gagalz menambahkan data!'; //Pesan jika proses tambah gagalz
     echo '<a href="tambah.php">Kembali</a>'; //Membuat link untu kembali ke halaman tambah;
   }
-}else { //Jika tidak terdeteksi tombol tambah di klik;
+}else{ //Jika tidak terdeteksi tombol tambah di klik;
   # code...
   //redirect kembali ke halaman tambah;
   echo '<script>window.history.back()</script>';

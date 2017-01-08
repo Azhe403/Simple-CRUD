@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 		<title>Test PHP</title>
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="/style/style.css" rel="stylesheet" type="text/css" media="screen" />
 	</head>
 	<body>
 		<h1> Test Form dengan PHP </h1>
@@ -11,12 +11,12 @@
 			<tr>
 				<td><label for="name" > Nama </label> </td>
 				<td>:</td>
-				<td><input type="text" name="name" size="30" maxlength="30"> </td>
+				<td><input type="text" name="name" placeholder="Masukkan nama anda" size="30" maxlength="30"> </td>
 			</tr>
 			<tr>
 				<td><label for="ttl"> Tempat, Tanggal Lahir</label></td>
 				<td>:</td>
-				<td><input type="text" name="ttl" size="30" maxlength="30"> </td>				
+				<td><input type="text" name="ttl" size="30" maxlength="30"> </td>
 			</tr>
 			<tr>
 				<td><label for="alamat">Alamat</label> </td>
@@ -38,7 +38,7 @@
 				<td>:</td>
 				<td><input type="radio" name="jnskel" value="Laki-laki">Laki-laki
 					<input type="radio" name="jnskel" value="Perempuan">Peremvuan
-					
+
 				</td>
 			</tr>
 

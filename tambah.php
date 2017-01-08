@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Simple CRUD by Azhe403</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  </head>
+  <body>
     <h2>Simple CRUD</h2>
-
     <p><a href="index.php">Beranda</a>/<a href="tambah.php">Tambah Data</a></p>
     <h3>Tambah data</h3>
-    <form class="" action="tambah-proses.php" method="post">
-      <table>
+    <form action="tambah-proses.php" method="post">
+      <table cellpadding="3" cellspacing="0">
         <tr>
           <td>ID</td>
-          <td><input type="text" name="id" required></td>
+          <td><input type="text" name="id" placeholder="Masukkan ID" required></td>
         </tr>
         <tr>
           <td>Nama</td>
-          <td><input type="text" name="nama" size="30" required></td>
+          <td><input type="text" name="nama" placeholder="Masukkan nama Anda" size="30" required></td>
         </tr>
         <tr>
           <td>Kelas</td>
           <td>
-            <select class="" name="">
+            <select class="" name="kelas" required>
               <option value="">Pilih kelas</option>
               <option value="VII">VII</option>
               <option value="VIII">VIII</option>
@@ -39,15 +41,10 @@
             </select>
           </td>
         </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><input type="submit" name="tambah" value="Tambah"></td>
-        </tr>
       </table>
+        &nbsp;
+        <input type="submit" name="tambah" value="Tambah">
     </form>
-
-  </head>
-  <body>
-
+    <p>&copy 2016 Azhe403, Inc. Allright Reserved.</p>
   </body>
 </html>
