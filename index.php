@@ -53,46 +53,35 @@
           </form>
           <br />
 
-          <table border="1" cellspacing="5" cellpadding="5">
-            <tr>
-              <th width="30">No</th>
-              <th width="300">Nama Lengkav</th>
-              <th width="60">Kelas</th>
-              <th width="200">Jurusan</th>
-            </tr>
             <?php
             //Include file koneksi
             include("koneksi.php");
-            $sql = "SELECT * FROM siswa"; //Membaca Tabel Siswa
+            echo "<table border=1 cellspacing=5 cellpadding=5>";
+              echo "<tr>";
+                echo "<th width=30>No</th>";
+                echo "<th width=300>Nama Lengkav</th>";
+                echo "<th width=60>Kelas</th>";
+                echo "<th width=200>Jurusan</th>";
+              echo "</tr>";
 
-            //Query ke database dengan Select;
-            $query = mysqli_query($conn, $sql);// or die(mysqli_error());
-
-            if(mysqli_num_rows($query) == 0){
-              //Jika data kosong
-              echo 'Tidak ada data.';
-            }else{
-              //Jika data tidak kosong, maka akan melalkukan perulangan While
-              $no = 1;
-              while($data = mysqli_fetch_assoc($query)){
-                  echo '<tr>';
-                      echo '<td width="40">'.$data['id'].'</td>';
-                      echo '<td width="300">'.$data['nama'].'</td>';
-                      echo '<td width="50">'.$data['kelas'].'</td>';
-                      echo '<td width="150">'.$data['jurusan'].'</td>';
-                  echo '</tr>';
-                  $no++;
-
-              }
+            $q = $conn->query("SELECT * FROM siswa");
+            foreach ($q as $data){
+              # code...
+              echo "<tr>";
+                  echo "<td>".$data['id']."</td>";
+                  echo "<td>".$data['nama']."</td>";
+                  echo "<td>".$data['kelas']."</td>";
+                  echo "<td>".$data['jurusan']."</td>";
+                  echo "<td><a href='delete.php?id=".$data['id']."'>Hapus</a></td>";
+              echo "</tr>";
             }
-
-             ?>
-          </table>
-
+            echo "</table>";
+            $q->close();
+            ?>
         </td>
       </tr>
       <tr>
-        <td><p>&copy 2016 Azhe403, Inc. Allright Reserved.</p></td>
+        <td><p>&copy 2017 Azhe403, Inc. Allright Reserved.</p></td>
       </tr>
     </table>
   </body>
