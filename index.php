@@ -16,7 +16,7 @@
       <tr>
         <td>
           <form action="insert.php" method="post" name="insert">
-            <table cellpadding="3" cellspacing="0">
+            <table left=200 cellpadding="3" cellspacing="0">
               <tr>
                 <td>ID</td>
                 <td><input type="text" name="id" placeholder="Masukkan ID" required></td>
@@ -41,9 +41,9 @@
                 <td>
                   <select class="" name="jurusan" required>
                     <option value="">Pilih Jurusan</option>
-                    <option value="Teknik Elektronika">Teknik Elektronika</option>
-                    <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
-                    <option value="Teknik Mesin">Teknik Mesin</option>
+                    <option value="Tandur">Tandur</option>
+                    <option value="Macul">Macul</option>
+                    <option value="Ntraktor">Ntraktor</option>
                   </select>
                 </td>
               </tr>
@@ -62,6 +62,7 @@
                 echo "<th width=300>Nama Lengkav</th>";
                 echo "<th width=60>Kelas</th>";
                 echo "<th width=200>Jurusan</th>";
+                echo "<th width=100>Aksi</th>";
               echo "</tr>";
 
             $q = $conn->query("SELECT * FROM siswa");
