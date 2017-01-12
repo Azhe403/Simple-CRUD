@@ -12,7 +12,7 @@ if(isset($_POST['tambah'])!=""){
   $jurusan  = $_POST['jurusan'];
 
   // Melalukan Query dengan perintah INSERT INTO untuk memasukkan data ke Database;
-  $insert = $conn->query($conn,"INSERT INTO siswa(id,nama,kelas,jurusan) VALUES('$id', '$nama', '$kelas', '$jurusan')");
+  $insert = $conn->query("INSERT INTO siswa(id,nama,kelas,jurusan) VALUES('$id', '$nama', '$kelas', '$jurusan')");
 
   if($insert)
   {
