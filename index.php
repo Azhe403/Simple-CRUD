@@ -21,7 +21,7 @@
       <?php
       //Include file koneksi
       include("koneksi.php");
-      $sql = "SELECT * FROM siswa";
+      $sql = "SELECT * FROM siswa"; //Membaca Tabel Siswa  
 
       //Query ke database dengan Select;
       $query = mysqli_query($koneksi, $sql);// or die(mysqli_error());
