@@ -45,6 +45,6 @@
         &nbsp;
         <input type="submit" name="tambah" value="Tambah">
     </form>
-    <p>&copy 2016 Azhe403, Inc. Allright Reserved.</p>
+    <p>&copy 2017 Azhe403, Inc. Allright Reserved.</p>
   </body>
 </html>
